@@ -1,0 +1,31 @@
+Appendix C – Traffic Generation Commands Using iPerf3
+
+This appendix presents the commands used for TCP and UDP traffic generation during the experiments.
+
+C.1 TCP Traffic Generation
+
+TCP Server
+
+iperf3 -s
+
+
+TCP Client
+
+iperf3 -c 10.0.0.1
+
+
+Description
+
+TCP traffic was used to simulate bulk data transmission such as file transfers and large-scale communication.
+
+
+C.2 UDP Traffic Generation
+
+UDP Client
+
+iperf3 -c 10.0.0.1 -u -b 100M
+
+
+Description
+
+Add TCP and UDP traffic generation commands
