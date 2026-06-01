@@ -1,28 +1,22 @@
-Appendix B – Network Topology Configuration Commands
+Appendix B – Mininet Topology and Network Configuration Commands
+This appendix contains the Mininet network configuration commands used during the experimental phase of this study, as well as example topology configurations discussed conceptually within the proposed SDN–DQL framework.
 
-This appendix contains the commands used to create and configure network topologies within Mininet.
-
-B.1 Default Mininet Topology
-
+B.1 Default Mininet Environment
 sudo mn
 
-
-B.2 Linear Topology
-
-sudo mn --topo linear,3 --controller=remote
-
-
-B.3 Ping Connectivity Test
-
+B.2 Ping Connectivity Test
 mininet> pingall
 
-
-B.4 Host Terminal Access
-
+B.3 Host Terminal Access
 mininet> h1 bash
-
 mininet> h2 bash
 
-B.5 OpenFlow Switch Verification
-
+B.4 OpenFlow Switch Verification
 ovs-vsctl show
+
+B.5 Example Topology Configuration
+Linear Topology Example
+sudo mn --topo linear,3
+
+Note:
+The linear topology example is provided to illustrate a topology discussed within the proposed SDN–DQL framework. The topology was considered conceptually as part of the research design but was not fully implemented or experimentally evaluated within the scope of the current study.
