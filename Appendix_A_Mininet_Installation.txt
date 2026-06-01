@@ -1,0 +1,43 @@
+Appendix A – Mininet Installation and Configuration Commands
+
+This appendix presents the commands and installation procedures implemented for the Software-Defined Networking (SDN) simulation environment used in this study.
+
+A.1 Mininet Installation
+
+sudo apt update
+
+sudo apt install -y git python3-pip python3-setuptools python3-dev build-essential
+
+git clone https://github.com/mininet/mininet.git
+
+cd mininet
+
+sudo ./util/install.sh -a
+
+
+A.2 Python Configuration
+
+sudo ln -s /usr/bin/python3 /usr/bin/python
+
+
+A.3 Mininet Verification
+
+sudo mn --test pingall
+
+
+A.4 mnexec Installation Fix
+
+cd ~/mininet
+
+make mnexec
+
+sudo make install
+
+
+A.5 Ryu Controller Installation
+
+pip install ryu
+
+Ryu Controller Execution
+
+ryu-manager ryu.app.simple_switch_13
