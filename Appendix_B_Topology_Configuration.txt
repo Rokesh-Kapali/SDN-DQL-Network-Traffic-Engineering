@@ -1,0 +1,28 @@
+Appendix B – Network Topology Configuration Commands
+
+This appendix contains the commands used to create and configure network topologies within Mininet.
+
+B.1 Default Mininet Topology
+
+sudo mn
+
+
+B.2 Linear Topology
+
+sudo mn --topo linear,3 --controller=remote
+
+
+B.3 Ping Connectivity Test
+
+mininet> pingall
+
+
+B.4 Host Terminal Access
+
+mininet> h1 bash
+
+mininet> h2 bash
+
+B.5 OpenFlow Switch Verification
+
+ovs-vsctl show
