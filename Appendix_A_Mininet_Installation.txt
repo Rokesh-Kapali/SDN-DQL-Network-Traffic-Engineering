@@ -1,43 +1,25 @@
 Appendix A – Mininet Installation and Configuration Commands
-
 This appendix presents the commands and installation procedures implemented for the Software-Defined Networking (SDN) simulation environment used in this study.
 
 A.1 Mininet Installation
-
 sudo apt update
-
 sudo apt install -y git python3-pip python3-setuptools python3-dev build-essential
-
 git clone https://github.com/mininet/mininet.git
-
 cd mininet
-
 sudo ./util/install.sh -a
 
-
 A.2 Python Configuration
-
 sudo ln -s /usr/bin/python3 /usr/bin/python
 
-
 A.3 Mininet Verification
-
 sudo mn --test pingall
 
-
 A.4 mnexec Installation Fix
-
 cd ~/mininet
-
 make mnexec
-
 sudo make install
 
-
-A.5 Ryu Controller Installation
-
-pip install ryu
-
-Ryu Controller Execution
-
-ryu-manager ryu.app.simple_switch_13
+A.5 Conceptual SDN Ryu Controller Integration
+The proposed research framework includes a Ryu SDN controller as a conceptual component of the SDN–DQL architecture.
+The controller was included to illustrate how centralized network visibility could support future reinforcement learning-assisted traffic engineering. However, the controller was not fully implemented or experimentally evaluated within the scope of the current study.
+The experimental work conducted in this research primarily focused on Mininet-based network simulation, traffic generation using iPerf3, throughput analysis, and congestion window behaviour. retransmission analysis, and congestion window behaviour.
